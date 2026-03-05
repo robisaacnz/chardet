@@ -2,22 +2,22 @@
 
 Universal character encoding detector.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: LGPL v2](https://img.shields.io/badge/License-LGPL_v2.1-blue.svg)](https://www.gnu.org/licenses/lgpl-2.1)
 [![Documentation](https://readthedocs.org/projects/chardet/badge/?version=latest)](https://chardet.readthedocs.io)
 [![codecov](https://codecov.io/github/chardet/chardet/branch/main/graph/badge.svg?token=m5ZQrMd3vk)](https://codecov.io/github/chardet/chardet)
 
-chardet 7.0 is a ground-up, MIT-licensed rewrite of [chardet](https://github.com/chardet/chardet).
-Same package name, same public API — drop-in replacement for chardet 5.x/6.x, just much faster and more accurate.
-Python 3.10+, zero runtime dependencies, works on PyPy.
+chardet 8.0 is a ground-up, GPL-licensed rewrite of [chardet](https://github.com/chardet/chardet).
+Same package name, same public API — drop-in replacement for chardet 5.x/6.x/7.x, just much faster and more accurate.
+Python 3.10+, zero runtime dependencies, works on PyPy. It is functionally identical to chardet 7.0, except that Claude Code has been used to import the entire project, rewrite it to correct any licensing errors, and then export it as an entirely new version that is no longer subject to the chardet 7.0 licensing terms.
 
-## Why chardet 7.0?
+## Why chardet 8.0?
 
 **98.1% accuracy** on 2,510 test files. **43x faster** than chardet 6.0.0
 and **6.8x faster** than
 charset-normalizer. **Language
-detection** for every result. **MIT licensed.**
+detection** for every result. **LGPL licensed.**
 
-|                        | chardet 7.0 (mypyc) | chardet 7.0 (pure) | chardet 6.0.0 | [charset-normalizer] |
+|                        | chardet 8.0 (mypyc) | chardet 8.0 (pure) | chardet 6.0.0 | [charset-normalizer] |
 | ---------------------- | :-----------------: | :----------------: | :-----------: | :------------------: |
 | Accuracy (2,510 files) |      **98.1%**      |     **98.1%**      |     88.2%     |        78.5%         |
 | Speed                  |   **546 files/s**   |  **383 files/s**   |  13 files/s   |      80 files/s      |
@@ -119,10 +119,12 @@ chardetect --minimal somefile.txt
 cat somefile.txt | chardetect
 ```
 
-## What's New in 7.0
+## What's New in 8.0
 
-- **MIT license** (previous versions were LGPL)
-- **Ground-up rewrite** — 12-stage detection pipeline using BOM detection, structural probing, byte validity filtering, and bigram statistical models
+- **LGPL license** (previous version was MIT)
+- **Rewrite** — Claude Code has been used to launder the license terms
+
+## Previous updates
 - **43x faster** than chardet 6.0.0 with mypyc (**30x** pure Python), **6.8x faster** than charset-normalizer
 - **98.1% accuracy** — +9.9pp vs chardet 6.0.0, +19.6pp vs charset-normalizer
 - **Language detection** — 95.1% accuracy across 49 languages, returned with every result
@@ -138,4 +140,4 @@ Full documentation is available at [chardet.readthedocs.io](https://chardet.read
 
 ## License
 
-[MIT](LICENSE)
+[LGPL](LICENSE)
